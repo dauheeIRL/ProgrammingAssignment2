@@ -11,16 +11,16 @@ makeCacheMatrix <- function(x = matrix()) {
   
   m <- NULL
 
-  set <- function(y) {
+  setfun <- function(y) {
     x <<- y
     m <<- NULL
   }
   
-  get <- function() x
+  getfun <- function() x
   setcache <- function(matx) m <<- matx
   getcache <- function() m
   
-  list(set = set, get = get,
+  list(set = setfun, get = getfun,
        setcache = setcache,
        getcache = getcache)
   
