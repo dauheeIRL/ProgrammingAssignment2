@@ -17,12 +17,12 @@ makeCacheMatrix <- function(x = matrix()) {
   }
   
   getfun <- function() x
-  setcache <- function(matx) m <<- matx
-  getcache <- function() m
+  setcachefun <- function(matx) m <<- matx
+  getcachefun <- function() m
   
   list(set = setfun, get = getfun,
-       setcache = setcache,
-       getcache = getcache)
+       setcache = setcachefun,
+       getcache = getcachefun)
   
 }
 
